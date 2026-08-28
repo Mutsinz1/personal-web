@@ -454,6 +454,48 @@ main {
 .social-link.leetcode svg { display: block; }
 
 
+/**
+ * resume download button
+ */
+
+.resume-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: var(--fs-6);
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.download-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.download-btn:hover { background: var(--bg-gradient-yellow-1); }
+
+.download-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+
+
 
 
 
