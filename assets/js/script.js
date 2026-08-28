@@ -84,6 +84,20 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
+// open the visitor's email app with the message prefilled
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = form.elements["fullname"].value.trim();
+  const email = form.elements["email"].value.trim();
+  const message = form.elements["message"].value.trim();
+
+  const subject = encodeURIComponent("Portfolio contact from " + name);
+  const body = encodeURIComponent(message + "\n\n— " + name + " (" + email + ")");
+
+  window.location.href = "mailto:am56@williams.edu?subject=" + subject + "&body=" + body;
+});
+
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
