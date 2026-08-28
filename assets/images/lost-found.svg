@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(240,2%,17%)"/>
+      <stop offset="1" stop-color="hsl(240,2%,10%)"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="hsl(45,100%,72%)"/>
+      <stop offset="1" stop-color="hsl(35,100%,68%)"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <!-- map grid -->
+  <g stroke="hsl(0,0%,30%)" stroke-width="2">
+    <line x1="0" y1="100" x2="640" y2="60"/>
+    <line x1="0" y1="220" x2="640" y2="180"/>
+    <line x1="0" y1="340" x2="640" y2="300"/>
+    <line x1="140" y1="0" x2="180" y2="400"/>
+    <line x1="330" y1="0" x2="360" y2="400"/>
+    <line x1="500" y1="0" x2="520" y2="400"/>
+  </g>
+  <!-- search radius -->
+  <circle cx="345" cy="185" r="120" fill="hsl(45,100%,72%)" opacity="0.08"/>
+  <circle cx="345" cy="185" r="120" fill="none" stroke="hsl(45,100%,72%)" stroke-width="3" stroke-dasharray="12 10" opacity="0.6"/>
+  <!-- map pin -->
+  <g>
+    <path d="M345 95 c-38 0 -65 28 -65 62 c0 46 65 108 65 108 s65 -62 65 -108 c0 -34 -27 -62 -65 -62 z" fill="url(#gold)"/>
+    <circle cx="345" cy="157" r="26" fill="hsl(240,2%,13%)"/>
+    <!-- magnifier inside pin -->
+    <circle cx="340" cy="152" r="11" fill="none" stroke="hsl(45,100%,72%)" stroke-width="5"/>
+    <line x1="348" y1="160" x2="358" y2="170" stroke="hsl(45,100%,72%)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
